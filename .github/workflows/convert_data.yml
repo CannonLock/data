@@ -22,5 +22,6 @@ jobs:
       - name: Deploy
         run: |
           python3 convert.py
+          git add .
           git commit -m "Auto Data Creation"
           git push
