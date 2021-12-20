@@ -10,7 +10,7 @@ def csv_to_json(path: str):
   file_name = os.path.basename(path).split(".")[0]
 
   with open(f"./{file_name}.json", "w") as fp:
-    fp.write(json.dump(csv_list, fp))
+    json.dump(csv_list, fp)
 
 def main():
   csv_to_json("./benchmark.csv")
