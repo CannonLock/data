@@ -9,19 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: CannonLock/data_transformer@master
 
-      - name: Initialize GH User
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-
-      - name: Deploy
-        run: |
-          python3 convert.py
-          git add .
-          git commit -m "Auto Data Creation"
-          git push
